@@ -1,6 +1,5 @@
-#this comment is a test for GitHub connection.
-#this comment from laptop
-#back at desktop
+#8th of 11 of 2020
+#HP Laptop 1
 print(9 ** 2)
 list1 = [x ** 2 for x in range(10)]
 print(list1)
@@ -17,3 +16,18 @@ for x in range(10):
                 list3.append((x,y))
 
 print(list3)
+
+
+
+name_for_userid = {
+    382: "Alice",
+    590: "Bob",
+    951: "Dilbert",
+}
+
+def greeting(userid):
+    return "Hi %s!" % name_for_userid.get(userid, "there")
+
+greeting(382)
+
+greeting(333333)
