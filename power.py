@@ -46,3 +46,10 @@ if x or y or z:
 
 if any((x, y, z)):
     print('passed')
+
+result = 9 // 4 #floor division
+result2 = 9 / 4 #classic division
+result3 = (2 + 1j) * (3 + 2j) #complex number primitives
+print(result)
+print(result2)
+print(result3)
