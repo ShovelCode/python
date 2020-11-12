@@ -50,6 +50,8 @@ if any((x, y, z)):
 result = 9 // 4 #floor division
 result2 = 9 / 4 #classic division
 result3 = (2 + 1j) * (3 + 2j) #complex number primitives
+result4 = 'e' in set('abcdefg')
 print(result)
 print(result2)
 print(result3)
+print(result4)
