@@ -21,6 +21,7 @@ reserved_words = set(['False', 'class', 'finally', 'is', 'return', 'None', 'cont
 reserved_words_check = 'until' in reserved_words #not Perl
 four_squares = [x * 2 for x in [abs(x) for x in (-1,-2,3,4)]]
 scrambled_eggs = scramble('eggs')
+big_number = math.factorial(20)
 #keep only one print statement
-print(scrambled_eggs)
+print(big_number)
 
