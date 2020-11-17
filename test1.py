@@ -29,10 +29,10 @@ joe_status = 'joe' in salespeople #in set
 both_status = salespeople & managers #intersection
 all_people = salespeople | managers #union
 only_sales = salespeople - managers #subtract
-#superset
-#subset
-#exclude intersection
+is_superset = salespeople > managers #superset
+is_subset = salespeople < managers #subset
+union_minus_intersection = salespeople ^ managers #exclude intersection
 
 #keep only one print statement
-print('joe' in salespeople)
+print(union_minus_intersection)
 
