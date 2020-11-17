@@ -25,6 +25,13 @@ big_number = math.factorial(20)
 #sets
 salespeople = {'joe', 'sarah', 'alex', 'kevin'}
 managers = {'sam', 'rachel', 'alex'}
+joe_status = 'joe' in salespeople #in set
+both_status = salespeople & managers #intersection
+all_people = salespeople | managers #union
+only_sales = salespeople - managers #subtract
+#superset
+#subset
+#exclude intersection
 
 #keep only one print statement
 print('joe' in salespeople)
