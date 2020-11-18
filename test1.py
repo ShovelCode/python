@@ -32,7 +32,6 @@ only_sales = salespeople - managers #subtract
 is_superset = salespeople > managers #superset
 is_subset = salespeople < managers #subset
 union_minus_intersection = salespeople ^ managers #exclude intersection
-
 #keep only one print statement
 print(union_minus_intersection)
 
