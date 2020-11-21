@@ -32,6 +32,7 @@ only_sales = salespeople - managers #subtract
 is_superset = salespeople > managers #superset
 is_subset = salespeople < managers #subset
 union_minus_intersection = salespeople ^ managers #exclude intersection
+set_of_nums = {x * x for x in range(10)} #set comprehension, not a list
 #keep only one print statement
-print(union_minus_intersection)
+print(set_of_nums)
 
