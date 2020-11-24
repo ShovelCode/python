@@ -33,6 +33,10 @@ is_superset = salespeople > managers #superset
 is_subset = salespeople < managers #subset
 union_minus_intersection = salespeople ^ managers #exclude intersection
 set_of_nums = {x * x for x in range(10)} #set comprehension, not a list
+a = 9
+b = 7
+#in line switch
+a, b = b, a
 #keep only one print statement
-print(set_of_nums)
+print(a) #outputs 7
 
