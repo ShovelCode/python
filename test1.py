@@ -37,6 +37,16 @@ a = 9
 b = 7
 #in line switch
 a, b = b, a
+
+class SwitchExample:
+    def __init__(self) -> None:
+        self.name = "la"
+        self.a = 9
+        self.b = 7
+    def info(self):
+        return ('testing')
+
+rec1 = SwitchExample
 #keep only one print statement
-print(a) #outputs 7
+print(rec1.info) #outputs from class
 
