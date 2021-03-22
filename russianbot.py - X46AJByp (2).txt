@@ -1,0 +1,40 @@
+import telebot
+from telebot import types
+from main import global_stat
+ 
+# функция global_stat возвращает мне данные в виде : b'{"count":1,"date":"2020-04-04","result":{"confirmed":1197405,"deaths":64606,"recovered":246152}}\n'
+ 
+bot = telebot.TeleBot('1239180030:AAFnw0HKMM3xSTbNYBZuXoum1J0YYbCGWJ4')
+ 
+ 
+@bot.message_handler(commands=['start'])
+def start(message):
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+    btn1 = types.KeyboardButton('Во всём мире')
+    btn2 = types.KeyboardButton('TEST')
+    btn3 = types.KeyboardButton('TEST')
+    btn4 = types.KeyboardButton('TEST')
+    markup.add(btn1, btn2, btn3, btn4)
+ 
+    send_message = f"<b>Привет {message.from_user.first_name}!</b>\nЧтобы узнать данные про test напишите " \
+        f"название страны, например: США, Украина, и так далее\n"
+    bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
+ 
+ 
+@bot.message_handler(content_types=['text'])
+def mess(message):
+    final_message = ""
+    get_message_bot = message.text.strip().lower()
+    if get_message_bot == "все":
+        location = global_stat()
+
+ #вот здесь возникают проблемы с возвращением нужных данных
+    if final_message == "":
+        final_message = f"<u>Данные по стране:</u>\n" \
+                f"Заболевших: </b>{location['result']['confirmed']:,}\n<b>Сметрей: </b>" \ 
+                f"{location['result']['deaths']:,}"
+ 
+    bot.send_message(message.chat.id, final_message, parse_mode='html')
+ 
+ 
+bot.polling(none_stop=True)
